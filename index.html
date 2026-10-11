@@ -23,37 +23,42 @@
   <title>OP-1 Field | Interactive Study</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/te-op1-field/assets/op1-field-favicon-DHyoJbwt.png">
   <link rel="icon" type="image/svg+xml" sizes="any" href="/te-op1-field/assets/op1-field-favicon-Zur9jv1U.svg">
-  <script type="module" crossorigin src="/te-op1-field/assets/index-BmM-sEi1.js"></script>
-  <link rel="stylesheet" crossorigin href="/te-op1-field/assets/index-CATSuud8.css">
+  <script type="module" crossorigin src="/te-op1-field/assets/index-BnT4zdnO.js"></script>
+  <link rel="stylesheet" crossorigin href="/te-op1-field/assets/index-D1HJhUKk.css">
 </head>
 <body>
   <header class="stage-bar songs-menu">
-    <fieldset class="song-mode" aria-label="Song mode">
-      <label><input type="radio" name="song-mode" value="build" checked><span>build</span></label>
-      <label><input type="radio" name="song-mode" value="play"><span>play</span></label>
-    </fieldset>
-    <div class="song-picker">
-      <button id="song-picker-toggle" class="song-picker-toggle" type="button" aria-expanded="false" aria-controls="song-picker-menu" aria-haspopup="true" aria-describedby="op1-song-help"><span class="song-picker-label">choose a song</span><span class="song-picker-caret" aria-hidden="true"></span></button>
-      <div id="song-picker-menu" class="song-picker-menu" hidden>
-        <div class="song-picker-actions" hidden>
-          <button id="song-return" class="song-session-action" type="button">return to project</button>
-          <button id="song-restart" class="song-session-action" type="button" hidden>restart build</button>
+    <div class="song-controls">
+      <fieldset class="song-mode" aria-label="Song mode">
+        <label><input type="radio" name="song-mode" value="build" checked><span>build</span></label>
+        <label><input type="radio" name="song-mode" value="play"><span>play</span></label>
+      </fieldset>
+      <div class="song-picker">
+        <button id="song-picker-toggle" class="song-picker-toggle" type="button" aria-expanded="false" aria-controls="song-picker-menu" aria-haspopup="true" aria-describedby="op1-song-help"><span class="song-picker-label">choose a song</span><span class="song-picker-caret" aria-hidden="true"></span></button>
+        <div id="song-picker-menu" class="song-picker-menu" hidden>
+          <div class="song-picker-actions" hidden>
+            <button id="song-return" class="song-session-action" type="button">return to project</button>
+            <button id="song-restart" class="song-session-action" type="button" hidden>restart build</button>
+          </div>
+          <div class="song-picker-list" role="group" aria-label="Field arrangements"></div>
         </div>
-        <div class="song-picker-list" role="group" aria-label="Field arrangements"></div>
       </div>
     </div>
     <p class="song-status"><span id="song-status" role="status" aria-live="polite" data-phase="idle" hidden></span></p>
-    <a class="device-switch" href="https://mitchivin.github.io/te-opxy/">OP–XY <span aria-hidden="true">↗</span></a>
-    <div class="project-links">
-      <button class="project-links-toggle" type="button" aria-label="About this project" aria-expanded="false" aria-controls="project-links-menu">
-        <span class="project-links-icon" aria-hidden="true"></span>
-      </button>
-      <nav id="project-links-menu" class="project-links-menu" aria-label="About this project" hidden>
-        <button id="sample-import-open" type="button">import a sound</button>
-        <p class="project-links-credit">made by mitch ivin</p>
-        <a href="https://mitchivin.com/" target="_blank" rel="noopener noreferrer">portfolio<span class="project-links-external" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
-        <a href="https://github.com/mitchivin/te-op1-field" target="_blank" rel="noopener noreferrer">github<span class="project-links-external" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
-      </nav>
+    <div class="stage-utilities">
+      <a class="device-switch" href="https://mitchivin.github.io/te-opxy/">OP–XY <span aria-hidden="true">↗</span></a>
+      <div class="project-links">
+        <button class="project-links-toggle" type="button" aria-label="About this project" aria-expanded="false" aria-controls="project-links-menu">
+          <span class="project-links-icon" aria-hidden="true"></span>
+        </button>
+        <nav id="project-links-menu" class="project-links-menu" aria-label="About this project" hidden>
+          <button id="sample-import-open" type="button">import a sound</button>
+          <button id="output-download" type="button" disabled>download mixdown</button>
+          <p class="project-links-credit">made by mitch ivin</p>
+          <a href="https://mitchivin.com/" target="_blank" rel="noopener noreferrer">portfolio<span class="project-links-external" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="https://github.com/mitchivin/te-op1-field" target="_blank" rel="noopener noreferrer">github<span class="project-links-external" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -62,7 +67,7 @@
     <p id="op1-song-help" class="sr-only">Build performs and records each instrument on the Field tape, one track at a time, then loops the finished song. Play prepares the same sounds and notes, then plays the finished tape without waiting through the build. Switching modes restarts the selected song. The song menu can restart a stopped build or return to your own project. Song arrangements use the connected Field synth and tape recorder.</p>
     <p id="op1-sampler-help" class="sr-only">The Sampler folder contains individual instrument notes. On T1, the encoders change start, loop in, loop out and end. Matching loop markers disables looping. Hold Shift for direction, tuning in cents, loop fade and gain. Tap an encoder to zoom and trim at 0.01-percent precision. T2 shapes the envelope. The project menu can import your own individual sound into SNAPSHOT. The same keys perform and record every sound.</p>
     <div id="op1-canvas" class="canvas" role="application" aria-label="Interactive OP-1 field physical model" aria-describedby="op1-controls-help op1-tape-edit-help op1-tape-memo-help op1-instrument-help op1-sampler-help op1-mixer-fx-help op1-sequencer-help op1-metronome-help op1-sound-path-help op1-output-help op1-com-help"></div>
-    <p id="op1-output-help" class="sr-only">Press Output, the key marked COM, to open mixdown. T4 records the combined stereo output after the master effect. Navigate to another mode and perform while recording; return to Output and press T2 to stop. T2 plays or stops the selected saved side, and T3 selects side A or B. Each side can hold up to six minutes. With the canvas focused, C opens Output and keys 2, 3 and 4 operate its controls; Escape returns. Mixdowns remain in this browser; USB file access and FM transmission are not connected yet.</p>
+    <p id="op1-output-help" class="sr-only">Press Output, the key marked COM, to open mixdown. T4 records the combined stereo output after the master effect. Navigate to another mode and perform while recording; return to Output and press T2 to stop. T2 plays or stops the selected saved side, and T3 selects side A or B. Each side can hold up to six minutes. With the canvas focused, C opens Output and keys 2, 3 and 4 operate its controls; Escape returns. Download the selected saved side from the project menu in its original audio format. Mixdowns remain in this browser; USB file access and FM transmission are not connected yet.</p>
     <p id="op1-com-help" class="sr-only">Hold Shift and press COM to open connections. T1 opens System Settings; blue selects a setting group, ochre selects a parameter, and orange changes Brightness, Power Off or Count In when selected. T1 returns to COM, and Shift plus COM returns to the previous screen. If Power Off is Delayed, flipping the switch starts a six-second shutdown; flip it back to abort, or press COM for instant off. With the canvas focused, Shift plus C, the number 1, arrow keys and Enter provide keyboard access; Shift plus Enter lowers a numeric value. P flips the power switch and C confirms a pending shutdown.</p>
     <p id="op1-sound-path-help" class="sr-only">Hold Shift and press Mixer to inspect the sound path and its zero-level warnings. With the canvas focused, Shift plus 4 opens the same screen. Press Mixer or a track key to return to mixer controls.</p>
     <p id="op1-metronome-help" class="sr-only">On the Tempo page, turn the orange encoder to set metronome level, or tap it to mute and restore that level. The monitor click sounds during tape playback and the recording count-in. It is separate from the internal instrument recording input.</p>
