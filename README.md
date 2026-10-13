@@ -6,12 +6,12 @@ An interactive browser interpretation of the Teenage Engineering OP-1 Field. Pla
 
 ![OP-1 Field interactive 3D device](preview.jpg)
 
-Works on desktop and phone. Choose **Build** to watch an arrangement take shape through the instrument and tape controls, **Play** to hear the result, or use the device to make your own sounds.
+Works on desktop and phone. Choose the steps icon (**Watch build**) or musical-note icon (**Full song**), then press **Play**. The transport handles Stop, Pause and Resume. While running, changing song or mode switches straight to that choice; paused or stopped selections stay quiet. You can also use the device to make your own sounds.
 
 - Playable keys, buttons and encoders with a responsive device display.
 - Synth and drum engines, editable samplers and effects.
 - Four-track tape recording, editing, playback and mixing.
-- Featured arrangements of 19-2000, Still D.R.E., Clint Eastwood, Numb / Encore and Super Mario Bros.
+- Featured arrangements: Axel F, Halloween Theme, Popcorn, Stranger Things and Veridis Quo.
 - Camera views for the screen, controls and hardware details.
 
 ![OP-1 Field screen and controls](surface.jpg)
