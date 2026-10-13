@@ -29,20 +29,23 @@
     if ('op1-field' === 'development' && new URLSearchParams(location.search).get('dev') === '1')
       document.documentElement.style.setProperty('--song-title-characters', '17');
   </script>
-  <script type="module" crossorigin src="/te-op1-field/assets/index-BV9cWYeH.js"></script>
-  <link rel="stylesheet" crossorigin href="/te-op1-field/assets/index-B534j9P5.css">
+  <script type="module" crossorigin src="/te-op1-field/assets/index-Bs8agxVT.js"></script>
+  <link rel="stylesheet" crossorigin href="/te-op1-field/assets/index-tLI5VKrh.css">
 </head>
-<body data-startup="loading">
+<body data-song-mode="play" data-startup="loading">
   <header class="stage-bar songs-menu">
-    <div class="song-controls">
+    <div class="header-start">
       <div class="song-playback">
         <fieldset id="song-mode" class="song-mode">
           <legend class="sr-only">Playback mode</legend>
-          <label data-label="Watch build"><input type="radio" name="song-mode" value="build" checked aria-label="Watch build"><span class="song-mode-icon" aria-hidden="true"></span><span class="sr-only">Watch build</span></label>
-          <label data-label="Full song"><input type="radio" name="song-mode" value="play" aria-label="Full song"><span class="song-mode-icon" aria-hidden="true"></span><span class="sr-only">Full song</span></label>
+          <label data-label="Full song"><input type="radio" name="song-mode" value="play" checked aria-label="Full song"><span class="song-mode-icon" aria-hidden="true"></span><span class="sr-only">Full song</span></label>
+          <label data-label="Watch build"><input type="radio" name="song-mode" value="build" aria-label="Watch build"><span class="song-mode-icon" aria-hidden="true"></span><span class="sr-only">Watch build</span></label>
         </fieldset>
-        <button id="song-transport" class="song-transport" type="button" data-action="start" data-icon="play" aria-label="Play the build of Axel F"><span class="song-transport-icon" aria-hidden="true"></span><span class="song-transport-label">play</span></button>
       </div>
+    <div class="stage-status"><p class="song-status"><span id="song-status" role="status" aria-live="polite" data-phase="idle" hidden></span></p></div>
+    </div>
+    <div class="song-controls">
+        <button id="song-transport" class="song-transport" type="button" data-action="start" data-icon="play" data-label="play" aria-label="Play Axel F"><span class="song-transport-icon" aria-hidden="true"></span><span class="song-transport-label sr-only">play</span></button>
       <div class="song-picker">
         <button id="song-picker-toggle" class="song-picker-toggle" type="button" aria-expanded="false" aria-controls="song-picker-menu" aria-haspopup="true" aria-describedby="op1-song-help"><span class="song-picker-label">Axel F</span><span class="song-picker-caret" aria-hidden="true"></span></button>
         <div id="song-picker-menu" class="song-picker-menu" hidden>
@@ -77,7 +80,6 @@
       <span class="stage-loading-label">loading op–1 field</span>
       <button type="button" hidden>try again</button>
     </div>
-    <div class="stage-status"><p class="song-status"><span id="song-status" role="status" aria-live="polite" data-phase="idle" hidden></span></p></div>
     <h1 class="sr-only">OP-1 field physical study</h1>
     <p id="op1-song-help" class="sr-only">Choose a song and a playback mode, then press Play. While running, choosing another song or mode switches straight to that performance. While paused or stopped, choices stay quiet until Play. Watch build performs and records each instrument on the Field tape, one track at a time, then loops the finished song. Stop ends the build; Restart begins it again from the start. Full song plays the completed tape. Pause and Resume keep your playback position. The song menu can return to your own project. The completed tape remains editable with the Field tape and mixer controls.</p>
     <p id="op1-sampler-help" class="sr-only">The Sampler folder contains individual instrument notes. On T1, the encoders change start, loop in, loop out and end. Matching loop markers disables looping. Hold Shift for direction, tuning in cents, loop fade and gain. Tap an encoder to zoom and trim at 0.01-percent precision. T2 shapes the envelope. The project menu can import your own individual sound into SNAPSHOT. The same keys perform and record every sound.</p>
